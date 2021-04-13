@@ -1,0 +1,57 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Login</th>
+        <th>id</th>
+        <th>image</th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+
+    async function getapi(url) {
+    
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    if (response) {
+         // hideloader();
+     }
+     buildTable(data);
+}
+// Calling that async function
+getapi("https://api.github.com/users");
+
+
+	function buildTable(response){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < response.length; i++){
+			var row = `<tr>
+							<td>${response[i].login}</td>
+							<td>${response[i].id}</td>
+							<td><img src= ${response[i].avatar_url} style= "width:200px; height: 300px"/> </td>
+					  </tr>`
+                      document.getElementById('myTable').innerHTML += row
+
+
+		}
+	}
+
+</script>
