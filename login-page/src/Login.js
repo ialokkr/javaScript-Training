@@ -78,13 +78,13 @@ function Login() {
                       </Button>
 
                       <Button
-                        style={{ backgroundColor: "red", maxWidth:"100px", marginLeft:"20px" }}
+                        style={{ backgroundColor: "green", maxWidth:"100px", marginLeft:"20px" }}
                         variant="contained"
                         color="secondary"
                         type="submit"
                         className="button-block"
                       >
-                        Log out
+                        Sign up
                       </Button>
                     </div>
                   </Grid>
