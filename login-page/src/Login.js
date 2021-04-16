@@ -10,19 +10,19 @@ import {
   Link,
 } from "@material-ui/core";
 import "./Login.css";
-import img11 from "./images/img11.jpg";
+import img10 from "./images/img10.jpg";
 function Login() {
   return (
-    <div style={{ backgroundImage: `url(${img11})` }}>
-      <AppBar position="static" alignitems="center" styles={{ color: "grey" }}>
+    <div style={{ backgroundImage: `url(${img10})` }}>
+      <AppBar position="static" alignitems="center" >
         <Toolbar>
-          <Grid container justify="center" wrap="wrap">
+          <Grid container justify="center" wrap="wrap" >
             <Grid item></Grid>
           </Grid>
         </Toolbar>
       </AppBar>
-      <Grid container spacing={0} justify="center" direction="row">
-        <Grid item>
+      <Grid container spacing={0} justify="center" direction="row" >
+        <Grid item >
           <Grid
             container
             direction="column"
@@ -66,7 +66,7 @@ function Login() {
                     />
                   </Grid>
                   <Grid item>
-                    <div styles={{flexFlow:"row wrap"}}>
+                    <div style={{flexFlow:"row wrap"}}>
                       <Button
                         style={{ backgroundColor: "blue", maxWidth:"100px", marginRight:"20px" }}
                         variant="contained"
@@ -78,13 +78,13 @@ function Login() {
                       </Button>
 
                       <Button
-                        style={{ backgroundColor: "red", maxWidth:"100px", marginLeft:"20px" }}
+                        style={{ backgroundColor: "Green", maxWidth:"100px", marginLeft:"20px" }}
                         variant="contained"
                         color="secondary"
                         type="submit"
                         className="button-block"
                       >
-                        Log out
+                        Sign up
                       </Button>
                     </div>
                   </Grid>
