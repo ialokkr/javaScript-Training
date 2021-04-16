@@ -13,8 +13,8 @@ import "./Login.css";
 import img10 from "./images/img10.jpg";
 function Login() {
   return (
-    <div style={{ backgroundImage: `url(${img10})` }}>
-      <AppBar position="static" alignitems="center" >
+    <div style={{ backgroundImage: `url(${img10})`, alt="image"}}>
+      <AppBar position="static"  >
         <Toolbar>
           <Grid container justify="center" wrap="wrap" >
             <Grid item></Grid>
